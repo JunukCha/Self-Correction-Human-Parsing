@@ -42,14 +42,18 @@ from detectron2.modeling import GeneralizedRCNNWithTTA
 # Register Custom Dataset
 from detectron2.data.datasets import register_coco_instances
 
-register_coco_instances("CIHP_train", {}, "../../data/msrcnn_finetune_annotations/CIHP_train.json",
-                        "../../data/instance-level_human_parsing/Training/Images")
-register_coco_instances("CIHP_val", {}, "../../data/msrcnn_finetune_annotations/CIHP_val.json",
-                        "../../data/instance-level_human_parsing/Validation/Images")
-register_coco_instances("demo_train", {}, "../../demo/annotations/demo_train.json",
-                        "../../demo/img")
-register_coco_instances("demo_val", {}, "../../demo/annotations/demo_val.json",
-                        "../../demo/img")
+# register_coco_instances("CIHP_train", {}, "../../data/CIHP/annotations/CIHP_train.json",
+#                         "../../data/CIHP/Training/Images")
+# register_coco_instances("CIHP_val", {}, "../../data/CIHP/annotations/CIHP_val.json",
+#                         "../../data/CIHP/Validation/Images")
+# register_coco_instances("CIHP_test", {}, "../../data/CIHP/annotations/CIHP_test.json",
+#                         "../../data/CIHP/Testing/Images")
+# register_coco_instances("demo_train", {}, "../../demo/annotations/demo_train.json",
+#                         "../../demo/img")
+# register_coco_instances("demo_val", {}, "../../demo/annotations/demo_val.json",
+#                         "../../demo/img")
+register_coco_instances("demo_test", {}, "../../data/DemoDataset/msrcnn_finetune_annotations/Demo.json", 
+                        "../../data/DemoDataset/global_pic")
 
 
 class Trainer(DefaultTrainer):
